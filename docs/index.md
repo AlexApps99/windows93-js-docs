@@ -10,6 +10,8 @@ $notif('notif text here') //displays a notification bubble on the bottom right
 $alert('alert text here') // displays an alert message
 $alert.info('info text here') // displays an info message
 $alert.error('error text here') // displays an error message
+$alert.progress('body','text') // see example of this, there are more arguments.
+$alert.help('test') // another dialog, see example.
 $confirm('confirm text here') // displays a question dialog
 // (you can put html in these functions)
 // there's a lot more to these functions as listed here. i plan to make a more detailed documentation of these in the future. (clue: passing objects to them and do more while writing less, as well as more features)
@@ -22,6 +24,7 @@ $window.current.minimize(); // minimise the window that's currently being focuse
 $window.current.restore(); // if the window that's currently being used has been minimised, open it back up again.
 $window.current.destroy(); // closes the window that's currently being focused on (no animation)
 $window.current.close(); // same as destroy but with animation
+$loader.script("http://scriptu.rl/dot.js") // loads a script, similar to $exe("js ")
 
 new Audio('/path/to/audio/audio.mp3').play(); // doesn't work with wav files sadly (btw the audio doesn't have to be on the windows 93 website)
 $audio('alert').play() // new Audio().play() but can play windows 93 sounds specified by name

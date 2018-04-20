@@ -104,7 +104,7 @@ var myWindowWithAMenu = $window({
 
 // this code will result in the image below
 ```
-![The result](result.png)
+![The result](img/result.png)
 
 How to start a file selector:
 ```js
@@ -113,4 +113,33 @@ $explorer('a/', {browse: true, explorer: true, onclose: function(ok, file) {
   // file = the name of the file
   $alert(`I selected ${file}!`);
 }});
+```
+How to use $alert.progress:
+```js
+var progressBar = $alert.progress("body","title") // spawns bar
+progressBar.update(33) // updates the progress and title. takes an integer input 0-100.
+```
+![Results](img/progressbar.png)
+Usage of $alert.help:
+```js
+$alert.help("<strong>html</strong>") // works with the same HTML as the previous, but with a white canvas as the background. Also, the title is fixed to 'Help'
+```
+![Result of this](img/helpprogress.png)
+
+This is how to use CLI (from docs)
+```
+le._apps.cli = {
+exec: function() {
+var Args = this.arg.arguments;
+$log(Args)
+// or you can do this:
+$log.red(Args[0])
+$log.cyan(Args[1])
+/*
+As well as this, you can use something to check if its undefined.
+*/
+},
+hascli: true,
+terminal: true,
+}
 ```
