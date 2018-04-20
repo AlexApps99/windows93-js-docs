@@ -127,7 +127,7 @@ $alert.help("<strong>html</strong>") // works with the same HTML as the previous
 ![Result of this](img/helpprogress.png)
 
 This is how to use CLI (from docs)
-```
+```js
 le._apps.cli = {
 exec: function() {
 var Args = this.arg.arguments;
