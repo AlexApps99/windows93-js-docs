@@ -129,17 +129,15 @@ $alert.help("<strong>html</strong>") // works with the same HTML as the previous
 This is how to use CLI (from docs)
 ```js
 le._apps.cli = {
-exec: function() {
-var Args = this.arg.arguments;
-$log(Args)
-// or you can do this:
-$log.red(Args[0])
-$log.cyan(Args[1])
-/*
-As well as this, you can use something to check if its undefined.
-*/
-},
-hascli: true,
-terminal: true,
-}
+  exec: function() {
+    var args = this.arg.arguments;
+    $log(args)
+    // or you can do this:
+    $log.red(args[0])
+    $log.cyan(args[1])
+    // As well as this, you can use something to check if its undefined.
+  },
+  hascli: true,
+  terminal: true
+};
 ```
