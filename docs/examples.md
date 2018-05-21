@@ -145,3 +145,4 @@ This is a simple example of how to use le._dom
 ```js
 le._dom.desktop.innerHTML = '<iframe scr="http://bing.com/"></iframe>' // Sets the desktop to a iframe, due to limitations you can not click on anything
 le._taskbar.innerHTML = "<button>Start</button>" // Sets the taskbar to a fake version, this could be used to create better taskbars
+```
