@@ -29,17 +29,17 @@ $prompt('Please insert your credit card number.', '', function(ok, text) {
 How to use $window properly:
 
 ```js
-// put the $window in a variable
-var myWindow = $window('url-or-whatever'); //right, returns an object with things to interact with the window or just information ect
+// Put the $window in a variable
+var myWindow = $window('url-or-whatever'); //Right, returns an object with things to interact with the window or just information ect
 
-/* you can use it like you would with $window, except $window.current is whatever you named the variable and to make the window the active window, just use the active() function
+/* You can use it like you would with $window, except $window.current is whatever you named the variable and to make the window the active window, just use the active() function
 
 or for a more efficient and genuinely better way to create windows, read on!*/
 
 var myWindow = $window({url: 'http://insert-url.he.re', title: 'title', icon: '/c/sys/skins/w93/question.png', width: 420, height: 420});
-/* this will create a window with the properties or whatever already set for you
+/* This will create a window with the properties or whatever already set for you
 
-you can also do more things such as making the window maximizable, minimizable, resizable or closable and lots more with this method!
+You can also do more things such as making the window maximizable, minimizable, resizable or closable and lots more with this method!
 
 to avoid making this too long, i’m just going to state some useful keys, arrays, objects and stuff to append to the object thingy in the function as well as saying what they do
 
@@ -72,7 +72,7 @@ onready (callback) executed when the window is fully loaded?
 
 How to do dialogs properly:
 ```js
-/* alright, now that you know how to use $window properly, dialog function thingies are the same! and by same, they both accept the same keys in the object etc... */
+/* Alright, now that you know how to use $window properly, dialog function thingies are the same! and by same, they both accept the same keys in the object etc... */
 ```
 
 How to use the menu property in $window:
@@ -102,27 +102,27 @@ var myWindowWithAMenu = $window({
   ]
 });
 
-// this code will result in the image below
+// This code will result in the image below
 ```
 ![The result](img/result.png)
 
 How to start a file selector:
 ```js
 $explorer('a/', {browse: true, explorer: true, onclose: function(ok, file) {
-  // ok = did the user press ok?
-  // file = the name of the file
+  // ok = Did the user press ok?
+  // file = The name of the file
   $alert(`I selected ${file}!`);
 }});
 ```
 How to use $alert.progress:
 ```js
-var progressBar = $alert.progress("body","title") // spawns bar
-progressBar.update(33) // updates the progress and title. takes an integer input 0-100.
+var progressBar = $alert.progress("body","title") // Spawns bar
+progressBar.update(33) // Updates the progress and title. takes an integer input 0-100.
 ```
 ![Results](img/progressbar.png)
 Usage of $alert.help:
 ```js
-$alert.help("<strong>html</strong>") // works with the same HTML as the previous, but with a white canvas as the background. Also, the title is fixed to 'Help'
+$alert.help("<strong>html</strong>") // Works with the same HTML as the previous, but with a white canvas as the background. Also, the title is fixed to 'Help'
 ```
 ![Result of this](img/helpprogress.png)
 
@@ -141,3 +141,7 @@ le._apps.cli = {
   terminal: true
 };
 ```
+This is a simple example of how to use le._dom
+```js
+le._dom.desktop.innerHTML = '<iframe scr="http://bing.com/"></iframe>' // Sets the desktop to a iframe, due to limitations you can not click on anything
+le._taskbar.innerHTML = "<button>Start</button>" // Sets the taskbar to a fake version, this could be used to create better taskbars
