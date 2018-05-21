@@ -44,6 +44,7 @@ $window.current // returns an object containing info about the program that's cu
 $window.current.cfg // returns all sorts of info about the program that's currently being focused on (is too big so i can't put everything here)
 $window.current.changeIcon('/a/path/to/an/image.png') // set the icon of the window that's currently being focused on to something else (image doesn't have to be on w93, can be off another website)
 $window.current.changeSize({width: 640, height: 480}) // set the size of the current window in pixels (some windows have a size limit)
+le._dom // allows you to edit the: background,taskbar,splash, and more, use innerHTML with desktop to do animated backgrounds
 le._apps // returns all applications in objects
 $fs.utils.exist('/a/file/dir.js') // check if a file exists, and if it exists, returns 0, if it doesn't exist, return false// if it's a folder you're specifying, it'll just return the contents of it in objects
 $fs.utils.getMenuOpenWith('/a/file/location.js') // returns the programs you can open the specified file with in an array with each application in an object
