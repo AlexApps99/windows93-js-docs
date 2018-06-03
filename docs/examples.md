@@ -141,6 +141,18 @@ le._apps.cli = {
   terminal: true
 };
 ```
+`this.arg.options` also provides some option parsing. Here's a quick guide:
+* setting `-a` will produce `this.arg.options.a === true`
+* setting `--abc` will produce `this.arg.options.abc === true`
+* setting `-ab` will produce `this.arg.options.a === true` and `this.arg.options.b === true`
+* setting `-a=text` will produce `this.arg.options.a === "text"`
+* setting `--abc=text` will produce `this.arg.options.abc === "text"`
+* setting `-ab=text` will produce `this.arg.options.a === "text"` and `this.arg.options.b === "text"`
+* an option will only receive a value if the option and the value are separated by an equals sign. If they are separated by a space, the option will be parsed as a boolean and the value will be parsed in `this.arg.arguments`.
+* to pass a value with spaces to an option, surround the value with quotes like so `--abc="some text"`. this will produce `this.arg.options.abc === "some text"`.
+
+Feel free to parse the command yourself, as the raw command is available as a string in `this.arg.command`.
+
 This is a simple example of how to use le._dom
 ```js
 le._dom.desktop.innerHTML = '<iframe src="http://bing.com/"></iframe>' // Sets the desktop to a iframe, due to limitations you can not click on anything
