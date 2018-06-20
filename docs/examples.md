@@ -37,13 +37,13 @@ var myWindow = $window('url-or-whatever'); //Right, returns an object with thing
 or for a more efficient and genuinely better way to create windows, read on!*/
 
 var myWindow = $window(
-{
-url: 'http://insert-url.he.re',
-title: 'title',
-icon: '/c/sys/skins/w93/question.png',
-width: 420,
-height: 420
-}
+  {
+    url: 'http://insert-url.he.re',
+    title: 'title',
+    icon: '/c/sys/skins/w93/question.png',
+    width: 420,
+    height: 420
+  }
 );
 /* This will create a window with the properties or whatever already set for you
 
