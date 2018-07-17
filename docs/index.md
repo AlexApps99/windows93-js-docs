@@ -26,8 +26,35 @@ $window.current.destroy(); // closes the window that's currently being focused o
 $window.current.close(); // same as destroy but with animation
 $loader.script("http://scriptu.rl/dot.js") // loads a script, similar to $exe("js ")
 $loader.css("http://css-u.rl/dot.css") // loads a css file, similar to $loader.script
+$loader([url1, url2], callback) // loads an array of css/js files, callback is called when all scripts/styles are loaded
+$drag("querySelector") // make an element draggable
+biosSetup() // open the BIOS, only executable at boot
+$noop // empty function, useful for callbacks that are required but you dont need.
+$explorer(options, [callback])
+    // options: String/Object
+    //          String: path to folder
+    // Object:
+    // browse: Boolean (browse for file)
+    // accept: String (accept X mimetype, use * for wildcard (e.g: image/* or */* for anything))
+    // path: String (path to folder)
+    // onclose: Function (called once file is selected)
+        // Returns:
+        // Boolean (If "Open" is clicked, true, otherwise, if window is closed or cancel is clicked, false)
+        // String (list of file(s) selected)
+        // if you have multiple files, use [Files].split(", ").map(e=>e.replace(/^"|"$/g, "")) to convert to an array
+$menu(Element, MenuArray, Object)
+  // Element: element to output to
+  // MenuArray: The array used for menus
+  // Object: 
+    // mode: String "bar" or "popup"
+$fs.utils.getIcon("file.txt") // gets the icon for a file/folder
+$fs.utils.isFolder("file.txt") // check if the string is a folder, returns a Boolean
+$fs.utils.getName("/path/to/file.txt") // returns only the file name, in this case, return "file.txt"
+$fs.utils.replaceExt("file.txt", "png") // replaces the file extension to something else, file.txt will become file.png
+$fs.utils.getMime("file.txt") // gets the mimetype of a file, note: not all mimetypes are supported
+$fs.utils.getExt("file.txt") // gets the extension of a file
+$fs.utils.getOpeners("file.txt") // returns an array of apps that can open the file specified
 
-new Audio('/path/to/audio/audio.mp3').play(); // doesn't work with wav files sadly (the audio doesn't have to be on the windows 93 website)
 $audio('alert').play() // howler apparently (you play windows 93 sounds specified by name)
 $boot.VERSION // returns the w93 version
 le._path // returns directories of things (.desktop returns where the desktop is located, .home returns where the users home is and .skin returns the folder the skin is)
@@ -51,10 +78,34 @@ $fs.utils.exist('/a/file/dir.js') // check if a file exists, and if it exists, r
 $fs.utils.getMenuOpenWith('/a/file/location.js') // returns the programs you can open the specified file with in an array with each application in an object
 $fs.utils.getFileMenu('/a/directory') //however, if you want a neater directory or whatever listing, then use the "foldersList" array in this
 // file creation
+
+// NOTE:
+// $db and localforage both use IndexedDB, they just use a different wrapper
+// you cannot use $db to get localStorage files and vice-verca
+
+// IndexedDB (Promise)
 localforage.setItem('filename.txt', 'hello world') // create/edit file, only effective after a restart or explorer refresh
 localforage.getItem('filename.txt').then(function(okthen){return okthen}) // get contents of a file
-$store.set('desktop/meme.txt', 'hello world'); // alternative method to creating/editing files, effective sometimes for files that already exist
-$store.getRaw('desktop/meme.txt') // alternative method to reading files, effective sometimes for files that already exist
+localforage.removeItem("filename.txt") // delete a file
+localforage.clear() // delete all files from IndexedDB
+localforage.keys().then(function(files){/* do something with files*/}) // returns an array of all files stored in IndexedDB 
+
+// IndexedDB (Async)
+$db.set("file.txt", "hello world") // create a file
+$db.del("file.txt") // delete a file
+$db.clear() // delete all files from IndexedDB
+$db.getRaw("file.txt", callback) // callback() returns the RAW file content
+$db.get("file.txt", callback) // callback() returns the file content, if JSON, returns the parsed result
+$db.keys(callback) // callback() returns null and an array of files stored in IndexedDB
+
+// localStorage (Sync)
+$store.set('desktop/meme.txt', 'hello world'); // create meme.txt in desktop
+$store.get("desktop/meme.txt") // returns 
+$store.clear() // delete all files from localStorage
+$store.getRaw('desktop/meme.txt') // read file meme.txt in desktop
+$store.del("desktop/meme.txt") // delete a file
+$store.keys() // returns all files saved into localStorage
+
 $explorer.refresh() // refresh explorer
 $archive('/folder/name')  // put the contents of the folder into a zipped archive that you can download, does not always work on folders in /c/
 ```
