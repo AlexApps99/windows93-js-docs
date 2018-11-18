@@ -17,7 +17,11 @@ $confirm('confirm text here') // displays a question dialog
 // there's a lot more to these functions as listed here. i plan to make a more detailed documentation of these in the future. (clue: passing objects to them and do more while writing less, as well as more features)
 $window('http://example.com') // opens a website in a window (bear in mind that some websites do not work in this) due to cross-origin related stuff
 $explorer('/c/a folder somewhere'); //opens up an explorer window in that directory
+
 $exe('application name') // open an application of your choice
+// if you're going to use this to execute a program stored in a js file somewhere in /a/
+// just grab the content of the file using $db, ect, and eval(aeiou) or new Function(aeiou)() the result
+
 $explorer.setCurrent(id) // find the explorer window via id then focus on it (0 is always the desktop)
 $window.current.maximize() // toggles between maximising to the window that is currently being used
 $window.current.minimize(); // minimise the window that's currently being focused on
@@ -90,7 +94,7 @@ localforage.removeItem("filename.txt") // delete a file
 localforage.clear() // delete all files from IndexedDB
 localforage.keys().then(function(files){/* do something with files*/}) // returns an array of all files stored in IndexedDB 
 
-// IndexedDB (Async)
+// IndexedDB (Async) (personally recommended)
 $db.set("file.txt", "hello world") // create a file
 $db.del("file.txt") // delete a file
 $db.clear() // delete all files from IndexedDB
@@ -106,7 +110,7 @@ $store.getRaw('desktop/meme.txt') // read file meme.txt in desktop
 $store.del("desktop/meme.txt") // delete a file
 $store.keys() // returns all files saved into localStorage
 
-$explorer.refresh() // refresh explorer
+$explorer.refresh() // refresh explorer (run once you create or remove a file or folder, preferably with $db, to make it appear)
 $archive('/folder/name')  // put the contents of the folder into a zipped archive that you can download, does not always work on folders in /c/
 ```
 ## Malicious:
