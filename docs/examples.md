@@ -1,3 +1,5 @@
+**NOTICE:** Please don't copy these examples 1:1, try to use them as a reference only.
+
 # Examples
 This detects wherether the "Cancel" or "OK" button has been pressed:
 ```js
