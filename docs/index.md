@@ -78,7 +78,7 @@ le._dom // includes a few html things, such as the taskbar or desktop
 le._apps // returns all applications in objects
 $fs.utils.exist('/a/file/dir.js') // check if a file exists, and if it exists, returns 0, if it doesn't exist, return false// if it's a folder you're specifying, it'll just return the contents of it in objects
 $fs.utils.getMenuOpenWith('/a/file/location.js') // returns the programs you can open the specified file with in an array with each application in an object
-$fs.utils.getFileMenu('/a/directory') //however, if you want a neater directory or whatever listing, then use the "foldersList" array in this
+$fs.utils.getFileMenu('/a/directory') // however, if you want a neater directory or whatever listing, then use the "foldersList" array in this
 // file creation
 
 // NOTE:
