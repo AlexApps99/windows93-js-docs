@@ -6,7 +6,7 @@ layout: default
 # Windows 93 JavaScript
 *Created by domenic, utf-16, DarkOK and 1024x2*
 
-## Things that may come in handy
+## Basic Windows/prompts:
 ```js
 $prompt('prompt text here', 'text in prompt text box') // displays a prompt message
 $notif('notif text here') // displays a notification bubble on the bottom right
@@ -20,11 +20,17 @@ $confirm('confirm text here') // displays a question dialog
 // there's a lot more to these functions as listed here. i plan to make a more detailed documentation of these in the future. (clue: passing objects to them and do more while writing less, as well as more features)
 $window('http://example.com') // opens a website in a window (bear in mind that some websites do not work in this) due to cross-origin related stuff
 $explorer('/c/a folder somewhere'); // opens up an explorer window in that directory
+```
 
+## Opening Applications:
+```js
 $exe('application name') // open an application of your choice
 // if you're going to use this to execute a program stored in a js file somewhere in /a/
 // just grab the content of the file using $db, ect, and eval(aeiou) or new Function(aeiou)() the result
+```
 
+## Window control/configuration:
+```js
 $explorer.setCurrent(id) // find the explorer window via id then focus on it (0 is always the desktop)
 $window.current.maximize() // toggles between maximising to the window that is currently being used
 $window.current.minimize(); // minimise the window that's currently being focused on
@@ -61,7 +67,10 @@ $fs.utils.replaceExt("file.txt", "png") // replaces the file extension to someth
 $fs.utils.getMime("file.txt") // gets the mimetype of a file, note: not all mimetypes are supported
 $fs.utils.getExt("file.txt") // gets the extension of a file
 $fs.utils.getOpeners("file.txt") // returns an array of apps that can open the file specified
+```
 
+# Miscellaneous:
+```js
 $audio('alert').play() // howler apparently (you play windows 93 sounds specified by name)
 $boot.VERSION // returns the w93 version
 le._path // returns directories of things (.desktop returns where the desktop is located, .home returns where the users home is and .skin returns the folder the skin is)
@@ -84,38 +93,48 @@ le._apps // returns all applications in objects
 $fs.utils.exist('/a/file/dir.js') // check if a file exists, and if it exists, returns 0, if it doesn't exist, return false// if it's a folder you're specifying, it'll just return the contents of it in objects
 $fs.utils.getMenuOpenWith('/a/file/location.js') // returns the programs you can open the specified file with in an array with each application in an object
 $fs.utils.getFileMenu('/a/directory') // however, if you want a neater directory or whatever listing, then use the "foldersList" array in this
-// file creation
+```
 
-// NOTE:
-// $db and localforage both use IndexedDB, they just use a different wrapper
-// you cannot use $db to get localStorage files and vice-verca
+## File access:
+**NOTE:**  
+`$db` and `localforage` both use `IndexedDB`, they just use a different wrapper.
+You cannot use `$db` to get `localStorage` files and vice-verca.
 
-// IndexedDB (Promise)
+### IndexedDB (Promise):
+```js
 localforage.setItem('filename.txt', 'hello world') // create/edit file, only effective after a restart or explorer refresh
 localforage.getItem('filename.txt').then(function(okthen){return okthen}) // get contents of a file
 localforage.removeItem("filename.txt") // delete a file
 localforage.clear() // delete all files from IndexedDB
 localforage.keys().then(function(files){/* do something with files*/}) // returns an array of all files stored in IndexedDB 
+```
 
-// IndexedDB (Async) (personally recommended)
+### IndexedDB (Async) (personally recommended):
+```js
 $db.set("file.txt", "hello world") // create a file
 $db.del("file.txt") // delete a file
 $db.clear() // delete all files from IndexedDB
 $db.getRaw("file.txt", callback) // callback() returns the RAW file content
 $db.get("file.txt", callback) // callback() returns the file content, if JSON, returns the parsed result
 $db.keys(callback) // callback() returns null and an array of files stored in IndexedDB
+```
 
-// localStorage (Sync)
+### localStorage (Sync):
+```js
 $store.set('desktop/meme.txt', 'hello world'); // create meme.txt in desktop
 $store.get("desktop/meme.txt") // returns 
 $store.clear() // delete all files from localStorage
 $store.getRaw('desktop/meme.txt') // read file meme.txt in desktop
 $store.del("desktop/meme.txt") // delete a file
 $store.keys() // returns all files saved into localStorage
+```
 
+### Other:
+```js
 $explorer.refresh() // refresh explorer (run once you create or remove a file or folder, preferably with $db, to make it appear)
 $archive('/folder/name')  // put the contents of the folder into a zipped archive that you can download, does not always work on folders in /c/
 ```
+
 ## Malicious:
 ```js
 le._settings.skin = "TOPKEK"; // changes the iconset to one that doesn't exist which causes all icons to fail loading unless you change the var back to 'w93'
@@ -126,4 +145,4 @@ $file.delete("/a/") // deletes /a/, messes up a lot of things.
 ```
 
 ## Examples:
-This has been moved [here](examples.md)
+This has been moved [here](examples.md).
