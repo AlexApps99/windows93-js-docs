@@ -1,3 +1,8 @@
+---
+title: Examples
+layout: default
+---
+
 **NOTICE:** Please don't copy these examples 1:1, try to use them as a reference only.
 
 # Examples
@@ -32,7 +37,7 @@ How to use $window properly:
 
 ```js
 // Put the $window in a variable
-var myWindow = $window('url-or-whatever'); //Right, returns an object with things to interact with the window or just information ect
+var myWindow = $window('url-or-whatever'); // Right, returns an object with things to interact with the window or just information ect
 
 /* You can use it like you would with $window, except $window.current is whatever you named the variable and to make the window the active window, just use the active() function
 

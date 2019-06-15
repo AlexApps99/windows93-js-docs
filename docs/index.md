@@ -1,10 +1,15 @@
+---
+title: Windows 93 JavaScript
+layout: default
+---
+
 # Windows 93 JavaScript
 *Created by domenic, utf-16, DarkOK and 1024x2*
 
 ## Things that may come in handy
 ```js
-$prompt('prompt text here', 'text in prompt text box') //displays a prompt message
-$notif('notif text here') //displays a notification bubble on the bottom right
+$prompt('prompt text here', 'text in prompt text box') // displays a prompt message
+$notif('notif text here') // displays a notification bubble on the bottom right
 $alert('alert text here') // displays an alert message
 $alert.info('info text here') // displays an info message
 $alert.error('error text here') // displays an error message
@@ -14,7 +19,7 @@ $confirm('confirm text here') // displays a question dialog
 // (you can put html in these functions)
 // there's a lot more to these functions as listed here. i plan to make a more detailed documentation of these in the future. (clue: passing objects to them and do more while writing less, as well as more features)
 $window('http://example.com') // opens a website in a window (bear in mind that some websites do not work in this) due to cross-origin related stuff
-$explorer('/c/a folder somewhere'); //opens up an explorer window in that directory
+$explorer('/c/a folder somewhere'); // opens up an explorer window in that directory
 
 $exe('application name') // open an application of your choice
 // if you're going to use this to execute a program stored in a js file somewhere in /a/
