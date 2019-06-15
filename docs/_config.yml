@@ -1,4 +1,10 @@
 theme: jekyll-theme-hacker
 title: "Windows 93 JavaScript Documentation"
 description: "A documentation of Windows 93's JavaScript created by Domenic Waterdash, Draco, DarkPhoenix10 and 1024x2 (with a few things from speedyplane2247)"
-title_separator: "-"
+show_downloads: false
+permalink: pretty
+plugins:
+  - jemoji
+  - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-seo-tag
