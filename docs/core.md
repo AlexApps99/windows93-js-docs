@@ -5,7 +5,7 @@ layout: default
 
 # BIOS
 ## `$boot`
-```json
+```js
 {
   "BIOS":      {},    // Div of BIOS itself
   "BOOTLOG":   {},    // Div of BIOS log (which apps are ready, etc)
