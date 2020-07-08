@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Windows 93 JavaScript
-*Created by domenic, utf-16, DarkOK and 1024x2*
+See the README for a list of contributors
 
 ## Basic Windows/prompts:
 ```js
