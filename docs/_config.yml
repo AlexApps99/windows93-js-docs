@@ -2,7 +2,7 @@ theme: jekyll-theme-hacker
 title: "Windows 93 JavaScript Documentation"
 description: "A documentation of Windows 93's JavaScript"
 show_downloads: false
-
+permalink: pretty # Hide .html on GitHub Pages
 plugins:
   - jemoji
   - jekyll-mentions
