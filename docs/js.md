@@ -1,5 +1,5 @@
 ---
-title: Windows93 JS
+title: Windows 93 JS
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 theme: jekyll-theme-leap-day
-title: "Windows 93 JavaScript Documentation"
-description: "A documentation of Windows 93's JavaScript"
+title: "Windows 93 Docs"
+description: "A documentation of Windows 93"
 show_downloads: false
 
 plugins:
