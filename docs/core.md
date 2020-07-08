@@ -5,7 +5,17 @@ layout: default
 
 # BIOS
 ## `$boot`
-Some boot related elements, and the version
+```json
+{
+  "BIOS":      {},    // Div of BIOS itself
+  "BOOTLOG":   {},    // Div of BIOS log (which apps are ready, etc)
+  "BIOSERROR": {},    // TODO
+  "TOOLONG":   {},    // Div that appears if boot takes too long
+  "REINSTALL": {},    // Div that asks if W93 should be reinstalled
+  "VERSION": "2.3.9", // W93 Version
+  "hasError": false   // TODO
+}
+```
 
 ## `biosSetup()`
 TODO
