@@ -3,59 +3,61 @@ title: Windows93 JS
 layout: default
 ---
 
-# Undocumented
-## `$error`
-Seems to be for the old bug report system, stack trace
-
+# BIOS
 ## `$boot`
 Some boot related elements, and the version
 
-## `biosSetup`
-Function only used in startup
-
-## `saveAs`
+## `biosSetup()`
 TODO
 
-## `$noop`
+
+# Undocumented
+## `$error(ex)`
+Seems to be for the old bug report system, stack trace
+
+## `saveAs(e, t)`
+TODO
+
+## `$noop(n)`
 Empty function
 
-## `$watch`
+## `$watch(c)`
 TODO
 
 ## `$url`
 Things about Windows93-related URLs
 
-## `$maxZ`
+## `$maxZ(e, n)`
 TODO
 
-## `$chain`
+## `$chain()`
 TODO
 
-## `$undo`
+## `$undo(n)`
 TODO
 
-## `$loop`
+## `$loop(e, t)`
 TODO
 
-## `system42`
+## `system42(e, n)`
 TODO
 
-## `$delegate`
+## `$delegate(r, o)`
 TODO
 
 ## `$io`
 TODO
 
-## `$kernel`
+## `$kernel(e, n)`
 TODO
 
-## `$route`
+## `$route(e)`
 TODO
 
-## `$fullscreen`
+## `$fullscreen(e, n)`
 TODO
 
-## `$animate`
+## `$animate(n, t, o)`
 TODO
 
 ## `$state`
@@ -64,85 +66,85 @@ TODO
 ## `$selection`
 TODO
 
-## `$ajax`
+## `$ajax(e, t, n, r)`
 TODO
 
-## `$db`
+## `$db(o, t, e)`
 TODO
 
-## `$store`
+## `$store(t, n, o, e)`
 TODO
 
-## `$el`
+## `$el(a, e)`
 TODO
 
 ## `$on`
 TODO
 
-## `$extend`
+## `$extend(t)`
 TODO
 
-## `$screenshot`
+## `$screenshot(d, e, f)`
 TODO
 
-## `$socket`
+## `$socket(n)`
 TODO
 
-## `$template`
+## `$template(n)`
 TODO
 
-## `$archive`
+## `$archive(i, s)`
 TODO
 
-## `$key`
+## `$key(e)`
 TODO
 
-## `$gamepad`
+## `$gamepad(n)`
 TODO
 
-## `$wheel`
+## `$wheel(s, e, t)`
 TODO
 
-## `$log`
+## `$log(e, t, o)`
 TODO
 
-## `$cli`
+## `$cli(e, t)`
 TODO
 
-## `$box`
+## `$box(e, o, t)`
 TODO
 
-## `$drag`
+## `$drag(i, s, e)`
 TODO
 
-## `$transition`
+## `$transition(e)`
 TODO
 
-## `$pos`
+## `$pos(f, t)`
 TODO
 
-## `$resize`
+## `$resize(e, t)`
 TODO
 
-## `$notif`
+## `$notif(e, t)`
 TODO
 
-## `$menu`
+## `$menu(i, e, t)`
 TODO
 
-## `$form`
+## `$form(e, t)`
 TODO
 
-## `$window`
+## `$window(e)`
 TODO
 
-## `$alert`
+## `$alert(n, t)`
 TODO
 
-## `$confirm`
+## `$confirm(e, n)`
 TODO
 
-## `$prompt`
+## `$prompt(o, e, i)`
 TODO
 
 ## `$fs`
@@ -151,22 +153,22 @@ TODO
 ## `$file`
 TODO
 
-## `$loader`
+## `$loader(n, o)`
 TODO
 
 ## `le`
 TODO
 
-## `$editor`
+## `$editor(a, e)`
 TODO
 
-## `$audio`
+## `$audio(n, o)`
 TODO
 
-## `$exe`
+## `$exe(t, e, i)`
 TODO
 
-## `$explorer`
+## `$explorer(o, e, t)`
 TODO
 
 
