@@ -1,0 +1,4 @@
+---
+title: MySpace
+layout: default
+---
