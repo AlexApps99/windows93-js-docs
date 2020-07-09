@@ -18,7 +18,7 @@ layout: default
 ```
 
 ## `biosSetup()`
-TODO
+Ran at boot, used to initialise the BIOS screen
 
 
 # Undocumented
@@ -26,7 +26,7 @@ TODO
 Seems to be for the old bug report system, stack trace
 
 ## `saveAs(e, t)`
-TODO
+Used by `$file.download`, to save a file from W93 to disk
 
 ## `$noop(n)`
 Empty function
@@ -35,13 +35,13 @@ Empty function
 TODO
 
 ## `$url`
-Things about Windows93-related URLs
+Functions about Windows93-related URLs
 
 ## `$maxZ(e, n)`
 TODO
 
 ## `$chain()`
-TODO
+Seems to be used in `$log`, TODO
 
 ## `$undo(n)`
 TODO
@@ -110,7 +110,7 @@ TODO
 TODO
 
 ## `$gamepad(n)`
-TODO
+Unused, currently just logs `n` to console
 
 ## `$wheel(s, e, t)`
 TODO
